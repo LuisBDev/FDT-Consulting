@@ -84,6 +84,7 @@ if (isset($_POST["enviar"]) and $_POST["enviar"] == "si") {
 
                     <div class="form-group">
                         <input type="password" id="user_password" name="user_password" class="form-control" placeholder="Password" />
+                        <i class="bi bi-eye-slash" id="togglePassword"></i>
                     </div>
 
                     <div class="form-group">

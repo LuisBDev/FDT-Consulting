@@ -39,17 +39,52 @@ if (isset($_POST["enviar"]) and $_POST["enviar"] == "si") {
     <div class="page-center">
         <div class="page-center-in">
             <div class="container-fluid">
-                <form class="sign-box" action="" method="post" id="login_form">
+
+                   <form class="sign-box" action="" method="post" id="login_form">
                     <div class="sign-avatar">
                         <img src="public/img/avatar-sign.png" alt="">
                     </div>
+
                     <header class="sign-title">Iniciar Sesión</header>
+
+                    <?php
+                    if (isset($_GET["m"])) {
+                        switch ($_GET["m"]) 
+                        {
+                            case "1";
+                            ?>
+                                <div class="alert alert-danger" role="alert">
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true"></span>
+                                    </button>
+                                    <i class="font-icon font-icon-warning"></i>
+                                    Credenciales Incorrectas
+                                </div>
+                            <?php
+                            break;
+                            case "2";
+                            ?>
+                                <div class="alert alert-warning" role="alert">
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true"></span>
+                                    </button>
+                                    <i class="font-icon font-icon-warning"></i>
+                                    Los campos están vacíos
+                                </div>
+                            <?php
+                            break;
+                        }
+                    }
+                    ?>
+
                     <div class="form-group">
                         <input type="text" id="user_correo" name="user_correo" class="form-control" placeholder="E-Mail" />
                     </div>
+
                     <div class="form-group">
                         <input type="password" id="user_password" name="user_password" class="form-control" placeholder="Password" />
                     </div>
+
                     <div class="form-group">
                         <div class="float-right reset">
                             <a href="reset-password.html">Recuperar Clave</a>
@@ -57,6 +92,7 @@ if (isset($_POST["enviar"]) and $_POST["enviar"] == "si") {
                     </div>
                     <input type="hidden" name="enviar" class="form-control" value="si">
                     <button type="submit" class="btn btn-rounded">Acceder</button>
+
                     <p class="sign-note">Nuevo en el sistema? <a href="sign-up.html">Registrar</a></p>
                     <!--<button type="button" class="close">
                         <span aria-hidden="true">&times;</span>

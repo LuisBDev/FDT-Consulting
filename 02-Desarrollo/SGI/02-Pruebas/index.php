@@ -78,8 +78,9 @@ if (isset($_POST["enviar"]) and $_POST["enviar"] == "si") {
                     ?>
 
                     <div class="form-group">
-                        <input type="text" id="user_correo" name="user_correo" class="form-control" placeholder="E-Mail" />
+                      <input type="text" id="user_correo" name="user_correo" class="form-control" placeholder="E-Mail" pattern=".*@.*" title="El correo electrónico debe contener '@'" required />
                     </div>
+
 
                     <div class="form-group">
                         <input type="password" id="user_password" name="user_password" class="form-control" placeholder="Password" />
@@ -93,7 +94,7 @@ if (isset($_POST["enviar"]) and $_POST["enviar"] == "si") {
                     <input type="hidden" name="enviar" class="form-control" value="si">
                     <button type="submit" class="btn btn-rounded">Acceder</button>
 
-                    <p class="sign-note">Nuevo en el sistema? <a href="sign-up.html">Registrar</a></p>
+
                     <!--<button type="button" class="close">
                         <span aria-hidden="true">&times;</span>
                     </button>-->

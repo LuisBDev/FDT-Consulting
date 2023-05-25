@@ -42,7 +42,7 @@ if (isset($_POST["enviar"]) and $_POST["enviar"] == "si") {
 
                    <form class="sign-box" action="" method="post" id="login_form">
                     <div class="sign-avatar">
-                        <img src="public/img/avatar-sign.png" alt="">
+                        <img src="public/img/logo-2.png" alt="" style="width: 170px; height: 100px; margin-left:-23%;">
                     </div>
 
                     <header class="sign-title">Iniciar Sesión</header>
@@ -83,7 +83,7 @@ if (isset($_POST["enviar"]) and $_POST["enviar"] == "si") {
 
 
                     <div class="form-group">
-                        <input type="password" id="user_password" name="user_password" class="form-control" placeholder="Password" />
+                        <input type="password" id="user_password" name="user_password" class="form-control" placeholder="Password" pattern=".{8,16}" title="La contraseña debe tener entre 8 y 16 caracteres" />
                         <i class="bi bi-eye-slash" id="togglePassword"></i>
                     </div>
 

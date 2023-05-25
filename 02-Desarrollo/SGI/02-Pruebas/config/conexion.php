@@ -1,13 +1,6 @@
 <?php
 session_start();
 
-class BaseUrl
-{
-    public static function getBaseUrl()
-    {
-        return "http://localhost:80/SGI/";
-    }
-}
 
 class Conectar
 {
@@ -31,6 +24,8 @@ class Conectar
 
     public function ruta()
     {
+       
+        require_once("baseurl.php");
         return BaseUrl::getBaseUrl();
     }
 }

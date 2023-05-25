@@ -1,55 +1,29 @@
 <?php
 
-class Validaciones
-{
-    public static function isEmpty($value)
-    {
-        return empty($value);
-    }
-}
-
-class Query extends Conectar
-{
-    public function executeQuery($sql, $params)
-    {
-        $conectar = parent::Conexion();
-        parent::set_names();
-
-        $statement = $conectar->prepare($sql);
-        $index = 1; // Start index from 1
-
-        foreach ($params as $value) {
-            $statement->bindValue($index, $value);
-            $index++;
-        }
-
-        $statement->execute();
-        return $statement->fetch();
-    }
-}
-
 
 class Usuario extends Conectar
 {
     public function Login()
     {
+        require_once("validaciones/validaciones_usuario.php");
+        require_once("config/query_usuario.php");   
         $conectar = parent::Conexion();
         parent::set_names();
 
         if (isset($_POST["enviar"])) {
             $correo = $_POST["user_correo"];
             $pass = $_POST["user_password"];
-
-            if (Validaciones::isEmpty($correo) || Validaciones::isEmpty($pass)) {
+            
+            if (Validaciones_usuario::isEmpty($correo) || Validaciones_usuario::isEmpty($pass)) {
                 $this->redirectWithError("index.php?m=2");
             } else {
                 $sql = "SELECT * FROM users WHERE user_correo = ? AND user_password = ? AND status = 1;";
                 $params = array($correo, $pass);
 
-                $query = new Query();
+                $query = new Query_usuario();
                 $resultado = $query->executeQuery($sql, $params);
 
-                if ($this->isValidUser($resultado)) {
+                if (Validaciones_usuario::isValidUser($resultado)) {
                     $this->setUserSession($resultado);
                     $this->redirectWithSuccess("view/Home/");
                 } else {
@@ -69,11 +43,6 @@ class Usuario extends Conectar
     {
         header("Location: " . Conectar::ruta() . $location);
         exit();
-    }
-
-    private function isValidUser($resultado)
-    {
-        return is_array($resultado) && count($resultado) > 0;
     }
 
     private function setUserSession($resultado)

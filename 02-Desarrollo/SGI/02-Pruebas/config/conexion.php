@@ -1,15 +1,15 @@
 <?php
 session_start();
 
+
 class Conectar
 {
     protected $dbh;
 
-
     protected function Conexion()
     {
         try {
-            $conectar = $this->dbh = new PDO("mysql:local=localhost;dbname=sgi_helpdesk", "root", "");
+            $conectar = $this->dbh = new PDO("mysql:host=localhost;dbname=sgi_helpdesk", "root", "");
             return $conectar;
         } catch (Exception $e) {
             print "¡Error BD!: " . $e->getMessage() . "<br/>";
@@ -24,6 +24,7 @@ class Conectar
 
     public function ruta()
     {
-        return "http://localhost:80/SGI/";
+        require_once("config/baseurl.php");
+        return BaseUrl::getBaseUrl();
     }
 }

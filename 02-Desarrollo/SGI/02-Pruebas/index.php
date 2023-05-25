@@ -89,7 +89,7 @@ if (isset($_POST["enviar"]) and $_POST["enviar"] == "si") {
 
                     <div class="form-group">
                         <div class="float-right reset">
-                            <a href="reset-password.html">Recuperar Clave</a>
+                            <a href="reset-password.php">Recuperar Clave</a>
                         </div>
                     </div>
                     <input type="hidden" name="enviar" class="form-control" value="si">

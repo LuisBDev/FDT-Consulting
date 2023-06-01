@@ -73,7 +73,9 @@ if (isset($_SESSION["user_id"])) {
 					<div class="form-group row">
 						<label for="exampleSelect" class="col-sm-2 form-control-label">Descripción</label>
 						<div class="col-sm-10">
-							<textarea rows="4" class="form-control" placeholder="Textarea"></textarea>
+                        <div class="summernote-theme-10">
+					         <textarea class="summernote" id="ticket_descripcion" name="name"></textarea>
+			        	</div>
 						</div>
 					</div>
 

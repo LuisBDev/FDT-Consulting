@@ -8,18 +8,6 @@ table.dataTable {
 table.dataTable th {
   white-space: nowrap;
 }
-table.dataTable .sorting:before,
-table.dataTable .sorting_asc:before,
-table.dataTable .sorting_desc:before,
-table.dataTable .sorting_asc_disabled:before,
-table.dataTable .sorting_desc_disabled:before,
-table.dataTable .sorting:after,
-table.dataTable .sorting_asc:after,
-table.dataTable .sorting_desc:after,
-table.dataTable .sorting_asc_disabled:after,
-table.dataTable .sorting_desc_disabled:after {
-  bottom: 0.6em !important;
-}
 table.dataTable tr.selected,
 table.dataTable tr.selected .sorting_1 {
   background-color: rgba(0, 136, 204, 0.8) !important;
@@ -33,9 +21,6 @@ table.dataTable.collapsed tr td:first-child {
 }
 .dataTables_filter {
   float: right;
-}
-.dt-bootstrap.form-inline {
-  display: block !important;
 }
 .dt-bootstrap .pagination {
   margin-top: 10px !important;

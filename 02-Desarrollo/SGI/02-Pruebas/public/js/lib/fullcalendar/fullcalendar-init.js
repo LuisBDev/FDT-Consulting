@@ -159,6 +159,22 @@ $(document).ready(function(){
                 '</div>'
             );
 
+            // Datepicker init
+            $('.fc-popover.click .datetimepicker').datetimepicker({
+                widgetPositioning: {
+                    horizontal: 'right'
+                }
+            });
+
+            $('.fc-popover.click .datetimepicker-2').datetimepicker({
+                widgetPositioning: {
+                    horizontal: 'right'
+                },
+                format: 'LT',
+                debug: true
+            });
+
+
             // Position popover
             function posPopover(){
                 $('.fc-popover.click').css({
@@ -213,10 +229,13 @@ $(document).ready(function(){
     Side datepicker
     ========================================================================== */
 
-    $('#side-datetimepicker').flatpickr({
+    $('#side-datetimepicker').datetimepicker({
         inline: true,
         format: 'DD/MM/YYYY'
     });
+
+/* ========================================================================== */
+
 });
 
 

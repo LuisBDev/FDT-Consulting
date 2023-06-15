@@ -543,9 +543,6 @@ body {
   margin-top: -5px;
   float: left;
 }
-.site-header img.hidden-lg-down {
-  display: none;
-}
 .site-header .site-logo {
   display: block;
   float: left;
@@ -775,7 +772,6 @@ body {
 }
 .site-header .dropdown-menu-messages .dropdown-menu-messages-header .nav-link {
   font-size: 1rem;
-  padding: 0;
   font-weight: 600;
   color: #919fa9;
   -webkit-transition: none;
@@ -970,10 +966,6 @@ body {
   margin: 0 0 0 15px;
   height: 30px;
   line-height: 30px;
-}
-.site-header .user-menu.dropdown .dropdown-item {
-  padding-top: 0;
-  padding-bottom: 0;
 }
 .site-header .user-menu.dropdown .dropdown-toggle {
   display: block;
@@ -1172,12 +1164,6 @@ body {
   .site-header .burger-right {
     display: block;
   }
-  .site-header img.hidden-lg-down {
-    display: inline-block;
-  }
-  .site-header img.hidden-md-down {
-    display: none;
-  }
   .site-header .site-header-collapsed {
     position: fixed;
     right: -270px;
@@ -1246,9 +1232,6 @@ body {
   }
   .site-header .site-header-collapsed .dropdown.open a.dropdown-toggle {
     color: #343434;
-  }
-  .site-header .site-header-collapsed .dropdown.open a.dropdown-toggle:after {
-    top: 2px;
   }
   .site-header .site-header-collapsed .dropdown.open a.dropdown-toggle:after,
   .site-header .site-header-collapsed .dropdown.open a.dropdown-toggle .font-icon {

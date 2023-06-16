@@ -7,9 +7,6 @@
 /* ==========================================================================
    Fullcalendar
    ========================================================================== */
-.fc-toolbar.fc-header-toolbar {
-  margin-bottom: 0;
-}
 .fc-unthemed {
   position: relative;
   z-index: 50;
@@ -341,12 +338,6 @@ a.fc-more:hover {
   font-size: 1rem;
   font-weight: 600;
 }
-.calendar-page .calendar-page-side .exp-timeline-iten {
-  margin-bottom: 10px;
-}
-.calendar-page .calendar-page-side .exp-timeline-iten:last-child {
-  margin-bottom: 0;
-}
 .calendar-page .calendar-page-side-section {
   border-top: solid 1px #d8e2e7;
 }
@@ -354,21 +345,7 @@ a.fc-more:hover {
   border-top: none;
 }
 .calendar-page .calendar-page-side-section-in {
-  padding: 5px;
-}
-.calendar-page .calendar-page-side-section-in .flatpickr-input {
-  display: none;
-}
-.calendar-page .calendar-page-side-section-in .exp-timeline {
-  padding-left: 10px;
-  padding-right: 10px;
-}
-.calendar-page .calendar-page-side-section-in .exp-timeline .exp-timeline-item + .exp-timeline-item {
-  margin-top: 10px;
-}
-.calendar-page .calendar-page-side-section-in .colors-guide-list {
-  padding-left: 10px;
-  padding-right: 10px;
+  padding: 0 15px;
 }
 @media (max-width: 1199px) {
   .calendar-page .calendar-page-content {
@@ -454,7 +431,4 @@ a.fc-more:hover {
 .colors-guide-list li {
   position: relative;
   padding: 0 0 10px 25px;
-}
-.calendar-page .flatpickr-calendar {
-  border: none;
 }

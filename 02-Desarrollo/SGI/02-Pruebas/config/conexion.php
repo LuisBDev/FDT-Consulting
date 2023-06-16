@@ -24,7 +24,7 @@ class Conectar
 
     public function ruta()
     {
-       
+
         require_once("baseurl.php");
         return BaseUrl::getBaseUrl();
     }

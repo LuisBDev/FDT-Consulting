@@ -27,4 +27,3 @@ if(isset($_POST['submit'])) {
     // Cerrar la conexión
     $conn->close();
 }
-?>

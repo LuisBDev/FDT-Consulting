@@ -242,7 +242,6 @@
 }
 .messenger-message-container {
   margin-bottom: 5px;
-  width: 100%;
 }
 .messenger-message-container .messages .time-ago {
   vertical-align: middle;
@@ -252,8 +251,6 @@
 }
 .messenger-message-container.from .messages .time-ago {
   padding-right: 10px;
-  white-space: nowrap;
-  text-align: right;
 }
 .messenger-message-container .messages li {
   margin-bottom: 5px;

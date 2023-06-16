@@ -1503,7 +1503,7 @@
    Editor summernote
    ========================================================================== */
 .note-popover {
-  display: none !important;
+  display: none;
   margin-top: 5px;
 }
 .note-popover .note-btn.btn {
@@ -1513,9 +1513,6 @@
 }
 .note-popover .note-btn.btn:hover {
   background-color: #f6f8fa;
-}
-.box-typical .note-editor .panel-heading {
-  padding: 5px;
 }
 .note-editor {
   margin: 0 0 15px;
@@ -1648,7 +1645,7 @@
 .note-editor .note-btn.btn.dropdown-toggle:after {
   margin-right: 0;
   position: relative;
-  top: 2px;
+  top: -1px;
 }
 .note-editor .note-btn.btn i {
   position: relative;

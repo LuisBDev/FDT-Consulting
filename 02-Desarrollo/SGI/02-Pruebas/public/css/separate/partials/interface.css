@@ -1941,14 +1941,6 @@ hr.margin-4 {
 /* ==========================================================================
    Dropdown
    ========================================================================== */
-.btn.dropdown-toggle:after {
-  top: 2px;
-  position: relative;
-}
-.dropdown-toggle:after {
-  top: 2px;
-  position: relative;
-}
 .dropdown-menu {
   border-color: #d8e2e7;
   margin-top: 6px;
@@ -2018,7 +2010,7 @@ hr.margin-4 {
   border-right: 4px solid transparent;
   border-left: 4px solid transparent;
   position: relative;
-  top: 2px;
+  top: -1px;
 }
 .dropdown.dropdown-typical a.dropdown-toggle .font-icon {
   vertical-align: middle;
@@ -3294,7 +3286,15 @@ a.label-light-grey:hover {
 .progress {
   background-color: #ecf2f5;
   color: #00a8ff;
-  height: 12px;
+}
+.progress[value] {
+  color: #00a8ff;
+}
+.progress[value]::-webkit-progress-value {
+  background-color: #00a8ff;
+}
+.progress[value]::-webkit-progress-bar {
+  background-color: #ecf2f5;
 }
 .progress.progress-no-margin {
   margin: 0;
@@ -3303,44 +3303,56 @@ a.label-light-grey:hover {
   -webkit-border-radius: 0;
           border-radius: 0;
   background-color: #00a8ff;
-  height: 12px;
-  font-size: 11px;
-  line-height: 13px;
 }
-.progress-success {
-  background: #46c35f;
+.progress-success[value]::-webkit-progress-value {
+  background-color: #46c35f;
+}
+.progress-success[value]::-moz-progress-bar {
+  background-color: #46c35f;
 }
 @media screen and (min-width: 0) {
   .progress-success .progress-bar {
     background-color: #46c35f;
   }
 }
-.progress-info {
-  background: #ac6bec;
+.progress-info[value]::-webkit-progress-value {
+  background-color: #ac6bec;
+}
+.progress-info[value]::-moz-progress-bar {
+  background-color: #ac6bec;
 }
 @media screen and (min-width: 0) {
   .progress-info .progress-bar {
     background-color: #ac6bec;
   }
 }
-.progress-warning {
-  background: #f29824;
+.progress-warning[value]::-webkit-progress-value {
+  background-color: #f29824;
+}
+.progress-warning[value]::-moz-progress-bar {
+  background-color: #f29824;
 }
 @media screen and (min-width: 0) {
   .progress-warning .progress-bar {
     background-color: #f29824;
   }
 }
-.progress-danger {
-  background: #fa424a;
+.progress-danger[value]::-webkit-progress-value {
+  background-color: #fa424a;
+}
+.progress-danger[value]::-moz-progress-bar {
+  background-color: #fa424a;
 }
 @media screen and (min-width: 0) {
   .progress-danger .progress-bar {
     background-color: #fa424a;
   }
 }
-.progress-aquamarine {
-  background: #21a788;
+.progress-aquamarine[value]::-webkit-progress-value {
+  background-color: #21a788;
+}
+.progress-aquamarine[value]::-moz-progress-bar {
+  background-color: #21a788;
 }
 @media screen and (min-width: 0) {
   .progress-aquamarine .progress-bar {
@@ -3472,15 +3484,14 @@ a.label-light-grey:hover {
   padding: 0;
 }
 .alert.alert-close {
-  padding-right: 35px;
+  padding-right: 30px;
 }
 .alert .close {
   color: #00a8ff;
   opacity: .5;
   position: absolute;
   right: 10px;
-  top: 5px !important;
-  padding: 0;
+  top: 4px !important;
 }
 .alert .close:hover {
   opacity: 1;
@@ -4790,7 +4801,6 @@ body.modal-open {
   float: left;
   background: #f6f8fa;
   white-space: nowrap;
-  padding: 0;
 }
 .tabs-section-nav .nav-item:first-child .nav-link {
   border-left-color: #d8e2e7;
@@ -4799,7 +4809,6 @@ body.modal-open {
   border-right-color: #d8e2e7;
 }
 .tabs-section-nav .nav-link {
-  padding: 0;
   display: block;
   color: #6c7a86;
   font-weight: 600;
@@ -4993,7 +5002,6 @@ body.modal-open {
    ========================================================================== */
 .card {
   border-color: #d8e2e7;
-  margin-bottom: 30px;
 }
 .card-footer,
 .card-header {
@@ -5016,7 +5024,8 @@ body.modal-open {
   font-size: .75rem;
 }
 .card-block {
-  padding: 16px;
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 .card-default .card-header {
   background-color: #f6f8fa;
@@ -5492,7 +5501,7 @@ body.modal-open {
 }
 .horizontal-navigation .main-nav .nav-link {
   position: relative;
-  line-height: 40px;
+  line-height: 56px;
   color: #999;
   font-weight: 600;
 }
@@ -5511,7 +5520,6 @@ body.modal-open {
   bottom: 1px;
   width: 100%;
   display: block;
-  left: 0;
 }
 @media (max-width: 1056px) {
   .horizontal-navigation .page-content {
@@ -6088,19 +6096,6 @@ body.modal-open {
 }
 .box-typical.box-typical-collapsed .box-typical-header .action-btn .font-icon-minus:before {
   content: "\e07a";
-}
-.box-typical .panel-heading {
-  padding: 17px 20px;
-}
-.box-typical .panel-title {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  margin: 0;
-  font-size: 1rem;
-  font-weight: 600;
-  line-height: 1.4;
-  padding: 0;
 }
 .box-panel .box-typical-header {
   border-bottom: 1px solid #d8e2e7;

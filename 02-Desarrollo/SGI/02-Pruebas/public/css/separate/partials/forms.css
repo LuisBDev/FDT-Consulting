@@ -3428,10 +3428,3 @@ textarea.form-control {
 var.result-container {
   font-size: .9375rem;
 }
-.btn:focus {
-  -webkit-box-shadow: none;
-          box-shadow: none;
-}
-pre + .form-group {
-  margin-top: 15px;
-}
